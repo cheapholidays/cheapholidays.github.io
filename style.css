@@ -191,17 +191,29 @@ header .logo {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Restaurant List */
+.restaurant-list {
+    padding: 2rem;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Restaurant Block */
 .restaurant-block {
     display: flex;
     align-items: flex-start;
+    gap: 1.5rem;
     margin-bottom: 2rem;
-    gap: 1rem;
+    background: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .restaurant-block img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -211,7 +223,7 @@ header .logo {
 }
 
 .restaurant-info h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #00d1a0;
     margin-bottom: 0.5rem;
 }
