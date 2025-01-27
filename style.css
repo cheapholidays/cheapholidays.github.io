@@ -181,6 +181,7 @@ header .logo {
     border-radius: 5px;
 }
 
+
 /* Blog Content */
 .blog-content {
     max-width: 800px;
@@ -199,13 +200,24 @@ header .logo {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Introductie tekst */
+.blog-intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.8;
+}
+
 /* Restaurant Block */
 .restaurant-block {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
-    background: #2a2a2a;
+    background: #1e1e1e; /* Zorg ervoor dat het dezelfde achtergrondkleur heeft als de intro */
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
