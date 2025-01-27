@@ -3,8 +3,8 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Donkere achtergrond */
-    color: #e0e0e0; /* Lichtgrijze tekst */
+    background-color: #121212;
+    color: #e0e0e0;
     line-height: 1.6;
 }
 
@@ -45,97 +45,22 @@ header .logo {
     transform: scale(1.1);
 }
 
-/* Visuele Header */
-.page-header img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Introductietekst */
-.intro-text {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: justify;
-    line-height: 1.8;
-}
-
-/* Blogpagina - Restaurantblokken */
-.restaurant-block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.restaurant-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-.restaurant-block img {
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.restaurant-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.restaurant-info h2 {
-    font-size: 1.8rem;
-    color: #00d1a0;
-    margin-bottom: 0.5rem;
-}
-
-.restaurant-info p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.restaurant-info a {
-    color: #00d1a0;
-    text-decoration: none;
-    margin-right: 1rem;
-    font-weight: 500;
-}
-
-.restaurant-info a:hover {
-    text-decoration: underline;
-}
-
-/* Thema blokken (Homepage) */
+/* Thema blokken */
 .themes {
     display: flex;
     justify-content: space-between;
-    gap: 1.5rem;
-    margin: 3rem 0;
-    padding: 0 2rem;
+    margin: 2rem 0;
+    gap: 1rem;
 }
 
 .theme-block {
     flex: 1;
     padding: 2rem;
     background: #1e1e1e;
-    text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .theme-block:hover {
@@ -149,20 +74,11 @@ header .logo {
 }
 
 .theme-block p {
-    margin-top: 0.5rem;
     font-size: 1.2rem;
+    margin: 0.5rem 0;
 }
 
-/* Laatste Artikelen (Homepage) */
-.latest-news {
-    margin: 3rem 2rem;
-}
-
-.latest-news h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
+/* Laatste Artikelen */
 .latest-news article {
     display: flex;
     align-items: center;
@@ -172,12 +88,32 @@ header .logo {
     background: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.latest-news img {
+.latest-news article img {
     width: 150px;
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.latest-news h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00d1a0;
+}
+
+.latest-news p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.latest-news a {
+    color: #00d1a0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.latest-news a:hover {
+    text-decoration: underline;
 }
