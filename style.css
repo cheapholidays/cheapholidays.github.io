@@ -1,50 +1,158 @@
+/* Algemene styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
+/* Header en navigatie */
 header {
-    background-color: #0073e6;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-section {
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Hero Sectie */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0073e6, #0056b3);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
     margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
+.cta-button {
+    background: white;
+    color: #0073e6;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Content Secties */
+.content-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
+    padding: 1.5rem;
+    background: #212529;
     color: white;
+}
+
+/* Animaties */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiviteit */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
