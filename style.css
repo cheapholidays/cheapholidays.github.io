@@ -31,64 +31,54 @@ header .logo {
     list-style: none;
     display: flex;
     gap: 2rem;
+    position: relative;
 }
 
-.nav-links li a {
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links a {
     text-decoration: none;
     color: #e0e0e0;
     font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
     color: #00ffb3;
-    transform: scale(1.1);
 }
 
-/* Styling voor de restaurantsectie */
-.restaurant {
-    margin: 2rem 0; /* Ruimte tussen de kaarten */
-    padding: 1.5rem; /* Binnenruimte in de kaarten */
-    background: #1e1e1e; /* Donkergrijs */
-    border-radius: 10px; /* Afgeronde hoeken */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animatie bij hover */
+/* Dropdown-menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1e1e1e;
+    padding: 1rem;
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.restaurant:hover {
-    transform: translateY(-10px); /* Kaart beweegt iets omhoog */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Diepere schaduw */
+.nav-links li:hover .dropdown {
+    display: block;
 }
 
-.restaurant h3 {
-    font-size: 1.8rem; /* Grotere titel voor de naam van het restaurant */
-    margin-bottom: 0.5rem; /* Ruimte onder de titel */
-    color: #00d1a0; /* Aqua accentkleur */
+.dropdown li {
+    margin: 0.5rem 0;
 }
 
-.restaurant p {
-    font-size: 1.2rem; /* Tekstgrootte voor de beschrijving */
-    margin-bottom: 1rem; /* Ruimte onder de tekst */
-    color: #e0e0e0; /* Lichtgrijze tekst */
+.dropdown a {
+    color: #e0e0e0;
+    font-weight: 400;
+    transition: color 0.3s ease;
 }
 
-.restaurant .cta-button {
-    display: inline-block; /* Knop in lijn met de tekst */
-    margin-top: 1rem; /* Ruimte boven de knop */
-    padding: 0.5rem 1.5rem; /* Binnenruimte van de knop */
-    font-size: 1rem; /* Tekstgrootte van de knop */
-    background: #00d1a0; /* Aqua accentkleur */
-    color: #121212; /* Donkere tekst */
-    text-decoration: none; /* Geen onderstreping */
-    border-radius: 5px; /* Afgeronde hoeken van de knop */
-    transition: background 0.3s ease, transform 0.3s ease; /* Hover-effecten */
+.dropdown a:hover {
+    color: #00ffb3;
 }
-
-.restaurant .cta-button:hover {
-    background: #00ffb3; /* Lichtere aqua kleur */
-    transform: scale(1.05); /* Iets groter bij hover */
-}
-
 
 /* Hero Sectie */
 .hero {
@@ -126,6 +116,73 @@ header .logo {
 .cta-button:hover {
     background: #00ffb3;
     transform: scale(1.05);
+}
+
+/* Thema blokken */
+.themes {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.theme-block {
+    flex: 1;
+    background: #1e1e1e;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.theme-block a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.theme-block h2 {
+    color: #00d1a0;
+}
+
+/* Nieuwsoverzicht */
+.latest-news {
+    margin: 3rem 0;
+}
+
+.latest-news h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.latest-news article {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.latest-news img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.latest-news h3 {
+    margin: 0;
+}
+
+.latest-news a {
+    color: #00d1a0;
+    text-decoration: none;
+}
+
+.latest-news a:hover {
+    text-decoration: underline;
 }
 
 /* Content Secties */
@@ -191,5 +248,19 @@ footer {
     .nav-links {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .themes {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .latest-news article {
+        flex-direction: column;
+    }
+
+    .latest-news img {
+        width: 100%;
+        height: auto;
     }
 }
