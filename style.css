@@ -128,6 +128,7 @@ header .logo {
     transform: scale(1.05);
 }
 
+/* Content Secties */
 .content-section {
     max-width: 800px;
     margin: 3rem auto;
@@ -136,18 +137,14 @@ header .logo {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     animation: fadeInUp 1s ease-in-out;
-
-    /* Fallback voor zichtbaarheid */
-    opacity: 1; /* Standaard zichtbaar als JS niet laadt */
-    transform: none; /* Geen verschuiving zonder JS */
-
-    transition: all 0.5s ease-in-out; /* Animatie-effect */
+    opacity: 0; /* Onzichtbaar standaard */
+    transform: translateY(20px); /* Verplaatst standaard iets naar beneden */
+    transition: all 0.5s ease-in-out; /* Zachte overgang */
 }
 
-/* Fade-in effecten bij scrollen */
 .content-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Zichtbaar na scrollen */
+    transform: translateY(0); /* Terug naar originele positie */
 }
 
 /* Footer */
