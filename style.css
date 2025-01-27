@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #121212; /* Donkere achtergrond */
     color: #e0e0e0; /* Lichtgrijze tekst */
-    line-height: 1.6; /* Betere leesbaarheid */
+    line-height: 1.6;
 }
 
 /* Header en navigatie */
