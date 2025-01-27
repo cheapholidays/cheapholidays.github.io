@@ -32,11 +32,16 @@
             <h2>Reistips</h2>
             <p>Ontvang slimme tips om jouw vakantie onvergetelijk te maken.</p>
         </section>
-       <section id="restaurants" class="content-section">
+<section id="restaurants" class="content-section">
     <h2>Restaurants</h2>
-    <p>De beste plekken om te eten, waar je ook naartoe reist.</p>
-    <a href="restaurants-delft.html" class="cta-button">Bekijk Top 3 in Delft</a>
+    <p>Bekijk onze topselecties van restaurants in verschillende steden:</p>
+
+    <article class="restaurant-overview">
+        <h3><a href="restaurants-delft.html">Top 3 Restaurants in Delft</a></h3>
+        <p>Ontdek de beste plekken om te eten in Delft, van verfijnde gerechten tot gezellige eetcafés.</p>
+    </article>
 </section>
+
         <section id="vliegtickets" class="content-section">
             <h2>Vliegtickets</h2>
             <p>Wij helpen je de beste aanbiedingen te vinden.</p>
@@ -46,5 +51,24 @@
     <footer>
         <p>&copy; 2025 Cheap Holidays. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.content-section');
+
+        const showSection = () => {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', showSection);
+        showSection(); // Zorg dat al zichtbare secties direct geladen worden
+    });
+</script>
+
 </body>
 </html>
