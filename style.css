@@ -45,6 +45,51 @@ header .logo {
     transform: scale(1.1);
 }
 
+/* Styling voor de restaurantsectie */
+.restaurant {
+    margin: 2rem 0; /* Ruimte tussen de kaarten */
+    padding: 1.5rem; /* Binnenruimte in de kaarten */
+    background: #1e1e1e; /* Donkergrijs */
+    border-radius: 10px; /* Afgeronde hoeken */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animatie bij hover */
+}
+
+.restaurant:hover {
+    transform: translateY(-10px); /* Kaart beweegt iets omhoog */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Diepere schaduw */
+}
+
+.restaurant h3 {
+    font-size: 1.8rem; /* Grotere titel voor de naam van het restaurant */
+    margin-bottom: 0.5rem; /* Ruimte onder de titel */
+    color: #00d1a0; /* Aqua accentkleur */
+}
+
+.restaurant p {
+    font-size: 1.2rem; /* Tekstgrootte voor de beschrijving */
+    margin-bottom: 1rem; /* Ruimte onder de tekst */
+    color: #e0e0e0; /* Lichtgrijze tekst */
+}
+
+.restaurant .cta-button {
+    display: inline-block; /* Knop in lijn met de tekst */
+    margin-top: 1rem; /* Ruimte boven de knop */
+    padding: 0.5rem 1.5rem; /* Binnenruimte van de knop */
+    font-size: 1rem; /* Tekstgrootte van de knop */
+    background: #00d1a0; /* Aqua accentkleur */
+    color: #121212; /* Donkere tekst */
+    text-decoration: none; /* Geen onderstreping */
+    border-radius: 5px; /* Afgeronde hoeken van de knop */
+    transition: background 0.3s ease, transform 0.3s ease; /* Hover-effecten */
+}
+
+.restaurant .cta-button:hover {
+    background: #00ffb3; /* Lichtere aqua kleur */
+    transform: scale(1.05); /* Iets groter bij hover */
+}
+
+
 /* Hero Sectie */
 .hero {
     text-align: center;
