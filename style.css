@@ -137,20 +137,22 @@ header .logo {
     text-decoration: none;
 }
 
-/* Nieuwsoverzicht */
 .latest-news {
     margin: 3rem 0;
+    padding: 2rem 1rem;
 }
 
 .latest-news h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .latest-news article {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
     margin-bottom: 2rem;
     padding: 1rem;
     background: #1e1e1e;
@@ -165,21 +167,21 @@ header .logo {
 }
 
 .latest-news img {
-    width: 150px;
-    height: 100px;
+    width: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 5px;
 }
 
 .latest-news h3 {
-    margin: 0;
     font-size: 1.5rem;
     color: #00d1a0;
+    margin: 0;
 }
 
 .latest-news p {
     font-size: 1rem;
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
 .latest-news a {
@@ -202,12 +204,24 @@ header .logo {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.blog-article h1 {
-    font-size: 2.5rem;
-    color: #00d1a0;
-    margin-bottom: 1rem;
+/* Kopteksten centreren */
+.blog-article h1,
+.blog-article h2,
+.blog-article h3 {
+    text-align: center; /* Centreer kopteksten */
+    margin: 1rem 0;
+    color: #00d1a0; /* Aqua accentkleur */
 }
 
+/* Normale tekst links uitlijnen */
+.blog-article p {
+    text-align: left; /* Links uitlijnen */
+    line-height: 1.8; /* Betere leesbaarheid */
+    margin-bottom: 1.5rem; /* Ruimte onder paragrafen */
+    color: #e0e0e0; /* Lichtgrijze tekst */
+}
+
+/* Afbeeldingen binnen artikelen */
 .blog-article img {
     width: 100%;
     height: auto;
@@ -215,12 +229,7 @@ header .logo {
     margin-bottom: 1.5rem;
 }
 
-.blog-article p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
+/* Links in artikelen */
 .blog-article a {
     color: #00d1a0;
     text-decoration: underline;
