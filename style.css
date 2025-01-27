@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #121212; /* Donkere achtergrond */
     color: #e0e0e0; /* Lichtgrijze tekst */
-    line-height: 1.6; /* Betere leesbaarheid */
+    line-height: 1.6;
 }
 
 /* Header en navigatie */
@@ -46,13 +46,6 @@ header .logo {
 }
 
 /* Visuele Header */
-.page-header {
-    position: relative;
-    text-align: center;
-    color: #e0e0e0;
-    margin-bottom: 2rem;
-}
-
 .page-header img {
     width: 100%;
     height: 300px;
@@ -72,7 +65,7 @@ header .logo {
     line-height: 1.8;
 }
 
-/* Restaurantblokken */
+/* Blogpagina - Restaurantblokken */
 .restaurant-block {
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +106,6 @@ header .logo {
 .restaurant-info p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #e0e0e0;
 }
 
 .restaurant-info a {
@@ -127,10 +119,65 @@ header .logo {
     text-decoration: underline;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1.5rem;
+/* Thema blokken (Homepage) */
+.themes {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 3rem 0;
+    padding: 0 2rem;
+}
+
+.theme-block {
+    flex: 1;
+    padding: 2rem;
     background: #1e1e1e;
-    color: #e0e0e0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.theme-block h2 {
+    font-size: 1.8rem;
+    color: #00d1a0;
+}
+
+.theme-block p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Laatste Artikelen (Homepage) */
+.latest-news {
+    margin: 3rem 2rem;
+}
+
+.latest-news h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.latest-news article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.latest-news img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
 }
