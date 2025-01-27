@@ -1,10 +1,11 @@
 /* Algemene styling */
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212; /* Donkere achtergrond */
     color: #e0e0e0; /* Lichtgrijze tekst */
+    line-height: 1.6; /* Verbeterde leesbaarheid */
 }
 
 /* Header en navigatie */
@@ -23,7 +24,7 @@ header {
 
 header .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700; /* Vetgedrukt */
     color: #00d1a0; /* Aqua accentkleur */
 }
 
@@ -36,12 +37,12 @@ header .logo {
 .nav-links li a {
     text-decoration: none;
     color: #e0e0e0;
-    font-weight: bold;
+    font-weight: 500; /* Halve nadruk */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #00ffb3; /* Lichtere aqua voor hover */
+    color: #00ffb3; /* Lichtere aqua */
     transform: scale(1.1);
 }
 
@@ -56,12 +57,14 @@ header .logo {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-weight: 700; /* Vetgedrukt voor koppen */
     animation: fadeInDown 1s ease-in-out;
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    font-weight: 400; /* Normale tekst */
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -70,6 +73,7 @@ header .logo {
     color: #121212;
     padding: 0.75rem 2rem;
     font-size: 1rem;
+    font-weight: 500; /* Halve nadruk */
     border-radius: 50px;
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -96,11 +100,13 @@ header .logo {
 .content-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-weight: 700; /* Vetgedrukt */
     color: #00d1a0; /* Aqua accentkleur */
 }
 
 .content-section p {
     font-size: 1.2rem;
+    font-weight: 400; /* Normale tekst */
     color: #e0e0e0;
 }
 
