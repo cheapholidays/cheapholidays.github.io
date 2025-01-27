@@ -5,27 +5,26 @@ body {
     padding: 0;
     background-color: #121212; /* Donkere achtergrond */
     color: #e0e0e0; /* Lichtgrijze tekst */
-    line-height: 1.6; /* Verbeterde leesbaarheid */
+    line-height: 1.6; /* Betere leesbaarheid */
 }
 
 /* Header en navigatie */
 header {
-    background: #1e1e1e; /* Donkergrijs */
-    color: #e0e0e0;
+    background: #1e1e1e;
     padding: 1rem 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
     font-size: 1.5rem;
-    font-weight: 700; /* Vetgedrukt */
-    color: #00d1a0; /* Aqua accentkleur */
+    font-weight: 700;
+    color: #00d1a0;
 }
 
 .nav-links {
@@ -37,12 +36,12 @@ header .logo {
 .nav-links li a {
     text-decoration: none;
     color: #e0e0e0;
-    font-weight: 500; /* Halve nadruk */
+    font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #00ffb3; /* Lichtere aqua */
+    color: #00ffb3;
     transform: scale(1.1);
 }
 
@@ -50,21 +49,21 @@ header .logo {
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, #1e1e1e, #2c2c2c); /* Zachte overgang donkergrijs */
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
     color: #e0e0e0;
 }
 
 .hero h1 {
     font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 1rem;
-    font-weight: 700; /* Vetgedrukt voor koppen */
     animation: fadeInDown 1s ease-in-out;
 }
 
 .hero p {
     font-size: 1.5rem;
+    font-weight: 400;
     margin-bottom: 2rem;
-    font-weight: 400; /* Normale tekst */
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -73,41 +72,35 @@ header .logo {
     color: #121212;
     padding: 0.75rem 2rem;
     font-size: 1rem;
-    font-weight: 500; /* Halve nadruk */
+    font-weight: 500;
     border-radius: 50px;
     text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #00ffb3; /* Lichtere aqua */
-    color: #121212; /* Donkere tekst */
-    transform: scale(1.1);
+    background: #00ffb3;
+    transform: scale(1.05);
 }
 
 /* Content Secties */
 .content-section {
     max-width: 800px;
     margin: 3rem auto;
-    text-align: center;
     padding: 2rem;
     background: #1e1e1e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     animation: fadeInUp 1s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
 }
 
-.content-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 700; /* Vetgedrukt */
-    color: #00d1a0; /* Aqua accentkleur */
-}
-
-.content-section p {
-    font-size: 1.2rem;
-    font-weight: 400; /* Normale tekst */
-    color: #e0e0e0;
+/* Fade-in effecten bij scrollen */
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */
@@ -119,15 +112,6 @@ footer {
 }
 
 /* Animaties */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
