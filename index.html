@@ -52,24 +52,7 @@
     <footer>
         <p>&copy; 2025 Cheap Holidays. Alle rechten voorbehouden.</p>
     </footer>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const sections = document.querySelectorAll('.content-section');
-
-        const showSection = () => {
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', showSection);
-        showSection(); // Zorg dat al zichtbare secties direct geladen worden
-    });
-</script>
-
+    
+<script src="script.js"></script>
 </body>
 </html>
