@@ -60,149 +60,16 @@ header .logo {
     border-radius: 10px;
 }
 
-.page-header h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    color: #00d1a0;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem 2rem;
-    border-radius: 10px;
-}
-
-/* Thema Blokken */
-.themes {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.theme-block {
-    flex: 1;
-    text-align: center;
-    background: #1e1e1e;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.theme-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-.theme-block h2 {
-    font-size: 1.8rem;
-    color: #00d1a0;
-    margin-bottom: 1rem;
-}
-
-.theme-block p {
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Nieuwsoverzicht */
-.latest-news {
-    margin: 3rem 0;
-    padding: 2rem 1rem;
-}
-
-.latest-news h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.latest-news article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.latest-news article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-.latest-news img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.latest-news h3 {
-    font-size: 1.5rem;
-    color: #00d1a0;
-    margin: 0;
-}
-
-.latest-news p {
-    font-size: 1rem;
-    margin: 0;
-}
-
-.latest-news a {
-    color: #00d1a0;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.latest-news a:hover {
-    text-decoration: underline;
-}
-
-/* Blog Artikel (individuele pagina's) */
-.blog-article {
+/* Introductietekst */
+.intro-text {
     max-width: 800px;
-    margin: 3rem auto;
+    margin: 2rem auto;
     padding: 2rem;
     background: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.blog-article h1,
-.blog-article h2,
-.blog-article h3 {
-    text-align: center;
-    margin: 1rem 0;
-    color: #00d1a0;
-}
-
-.blog-article p {
-    text-align: left;
+    text-align: justify;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #e0e0e0;
-}
-
-.blog-article img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-}
-
-.blog-article a {
-    color: #00d1a0;
-    text-decoration: underline;
-}
-
-.blog-article a:hover {
-    text-decoration: none;
 }
 
 /* Restaurantblokken */
@@ -266,56 +133,4 @@ footer {
     padding: 1.5rem;
     background: #1e1e1e;
     color: #e0e0e0;
-}
-
-/* Animaties */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsiviteit */
-@media (max-width: 768px) {
-    .themes {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .latest-news article {
-        flex-direction: column;
-    }
-
-    .restaurant-block {
-        flex-direction: column;
-    }
-
-    .restaurant-block img {
-        width: 100%;
-    }
-
-    .page-header img {
-        height: 200px;
-    }
-
-    .page-header h1 {
-        font-size: 2rem;
-        padding: 0.5rem 1rem;
-    }
 }
