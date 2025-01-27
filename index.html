@@ -8,51 +8,83 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header>
-    <nav>
-        <div class="logo">Cheap Holidays</div>
-        <ul class="nav-links">
-            <li><a href="#reistips">Reistips</a></li>
-            <li><a href="restaurants-delft.html">Restaurants</a></li> <!-- Link naar de subpagina -->
-            <li><a href="#vliegtickets">Vliegtickets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <div class="logo">Cheap Holidays</div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Restaurants</a>
+                    <ul class="dropdown">
+                        <li><a href="restaurants-delft.html">Top 3 Restaurants in Delft</a></li>
+                        <li><a href="top3-italiaans.html">Top 3 Italiaanse Restaurants</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Vliegtickets</a>
+                    <ul class="dropdown">
+                        <li><a href="goedkope-vliegtickets.html">Goedkope vliegtickets</a></li>
+                        <li><a href="tips-vliegen.html">Tips voor comfortabel vliegen</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Reistips</a>
+                    <ul class="dropdown">
+                        <li><a href="bagage-tips.html">Tips voor je bagage</a></li>
+                        <li><a href="bestemmingen-2025.html">Populaire bestemmingen 2025</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <!-- Hero Sectie -->
-        <section class="hero">
-            <h1>Ontdek de Wereld met Cheap Holidays</h1>
-            <p>De beste tips, deals en inspiratie voor jouw volgende reis.</p>
-            <a href="#vliegtickets" class="cta-button">Bekijk onze deals</a>
+        <!-- Thema blokken -->
+        <section class="themes">
+            <div class="theme-block">
+                <a href="#">
+                    <h2>Restaurants</h2>
+                    <p>Ontdek de beste eetplekken!</p>
+                </a>
+            </div>
+            <div class="theme-block">
+                <a href="#">
+                    <h2>Vliegtickets</h2>
+                    <p>Goedkope vluchten en tips.</p>
+                </a>
+            </div>
+            <div class="theme-block">
+                <a href="#">
+                    <h2>Reistips</h2>
+                    <p>Handige tips voor een zorgeloze reis.</p>
+                </a>
+            </div>
         </section>
 
-        <!-- Placeholder Secties -->
-        <section id="reistips" class="content-section">
-            <h2>Reistips</h2>
-            <p>Ontvang slimme tips om jouw vakantie onvergetelijk te maken.</p>
-        </section>
-<section id="restaurants" class="content-section">
-    <h2>Restaurants</h2>
-    <p>Bekijk onze topselecties van restaurants in verschillende steden:</p>
-
-    <article class="restaurant-overview">
-        <h3><a href="restaurants-delft.html">Top 3 Restaurants in Delft</a></h3>
-        <p>Ontdek de beste plekken om te eten in Delft, van verfijnde gerechten tot gezellige eetcafés.</p>
-    </article>
-</section>
-
-        <section id="vliegtickets" class="content-section">
-            <h2>Vliegtickets</h2>
-            <p>Wij helpen je de beste aanbiedingen te vinden.</p>
-            <a href="#contact" class="cta-button">Contacteer ons voor deals</a>
+        <!-- Laatste Artikelen -->
+        <section class="latest-news">
+            <h2>Laatste Artikelen</h2>
+            <article>
+                <img src="delft-header.jpg" alt="Delft">
+                <h3><a href="restaurants-delft.html">Top 3 Restaurants in Delft</a></h3>
+                <p>Ontdek onze selectie van de beste restaurants in Delft. <a href="restaurants-delft.html">Lees verder...</a></p>
+            </article>
+            <article>
+                <img src="goedkope-vliegtickets.jpg" alt="Goedkope vliegtickets">
+                <h3><a href="goedkope-vliegtickets.html">Goedkope vliegtickets</a></h3>
+                <p>Hoe vind je de beste deals voor vliegtickets? <a href="goedkope-vliegtickets.html">Lees verder...</a></p>
+            </article>
+            <article>
+                <img src="bagage-tips.jpg" alt="Bagage tips">
+                <h3><a href="bagage-tips.html">Tips voor je bagage</a></h3>
+                <p>Reizen zonder stress met deze bagagetips. <a href="bagage-tips.html">Lees verder...</a></p>
+            </article>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Cheap Holidays. Alle rechten voorbehouden.</p>
     </footer>
-    
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
