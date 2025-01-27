@@ -156,36 +156,42 @@ header .logo {
     text-decoration: underline;
 }
 
-/* Blog Artikel */
-.blog-title {
+/* Blog Hero */
+.blog-hero {
+    position: relative;
     text-align: center;
-    font-size: 2.5rem;
-    margin: 2rem 0;
-    color: #00d1a0;
+    margin-bottom: 2rem;
 }
 
 .blog-header-image {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 2rem;
 }
 
+.blog-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #00d1a0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Blog Content */
 .blog-content {
     max-width: 800px;
-    margin: 0 auto;
-    background: #1e1e1e;
+    margin: 0 auto 2rem auto;
     padding: 2rem;
+    background: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.blog-content p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-}
-
-/* Restaurant Blokken */
+/* Restaurant Block */
 .restaurant-block {
     display: flex;
     align-items: flex-start;
@@ -198,7 +204,6 @@ header .logo {
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .restaurant-info {
