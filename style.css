@@ -31,47 +31,47 @@ header .logo {
     list-style: none;
     display: flex;
     gap: 2rem;
+}
+
+.nav-links li {
     position: relative;
 }
 
-.nav-links > li {
-    position: relative;
-}
-
-.nav-links a {
+.nav-links li a {
     text-decoration: none;
     color: #e0e0e0;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     color: #00ffb3;
+    transform: scale(1.1);
 }
 
-/* Dropdown-menu */
-.dropdown {
-    display: none;
+.nav-links li ul {
     position: absolute;
-    top: 100%;
-    left: 0;
     background: #1e1e1e;
+    border-radius: 5px;
     padding: 1rem;
     list-style: none;
-    border-radius: 10px;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 10;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.nav-links li:hover .dropdown {
+.nav-links li:hover ul {
     display: block;
 }
 
-.dropdown li {
+.nav-links li ul li {
     margin: 0.5rem 0;
 }
 
-.dropdown a {
-    color: #e0e0e0;
+.nav-links li ul li a {
+    font-size: 0.9rem;
 }
 
 /* Hero Sectie */
@@ -86,12 +86,14 @@ header .logo {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .hero p {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .cta-button {
@@ -110,16 +112,17 @@ header .logo {
     transform: scale(1.05);
 }
 
-/* Thema blokken */
+/* Thema Blokken */
 .themes {
     display: flex;
+    justify-content: space-around;
     gap: 2rem;
-    margin: 2rem 0;
-    text-align: center;
+    margin: 3rem 0;
 }
 
 .theme-block {
     flex: 1;
+    text-align: center;
     background: #1e1e1e;
     padding: 2rem;
     border-radius: 10px;
@@ -128,15 +131,22 @@ header .logo {
 }
 
 .theme-block:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-.theme-block a {
+.theme-block h2 {
+    font-size: 1.8rem;
     color: #00d1a0;
-    text-decoration: none;
+    margin-bottom: 1rem;
 }
 
+.theme-block p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Nieuwsoverzicht */
 .latest-news {
     margin: 3rem 0;
     padding: 2rem 1rem;
@@ -204,24 +214,21 @@ header .logo {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Kopteksten centreren */
 .blog-article h1,
 .blog-article h2,
 .blog-article h3 {
-    text-align: center; /* Centreer kopteksten */
+    text-align: center;
     margin: 1rem 0;
-    color: #00d1a0; /* Aqua accentkleur */
+    color: #00d1a0;
 }
 
-/* Normale tekst links uitlijnen */
 .blog-article p {
-    text-align: left; /* Links uitlijnen */
-    line-height: 1.8; /* Betere leesbaarheid */
-    margin-bottom: 1.5rem; /* Ruimte onder paragrafen */
-    color: #e0e0e0; /* Lichtgrijze tekst */
+    text-align: left;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
 }
 
-/* Afbeeldingen binnen artikelen */
 .blog-article img {
     width: 100%;
     height: auto;
@@ -229,7 +236,6 @@ header .logo {
     margin-bottom: 1.5rem;
 }
 
-/* Links in artikelen */
 .blog-article a {
     color: #00d1a0;
     text-decoration: underline;
@@ -237,6 +243,61 @@ header .logo {
 
 .blog-article a:hover {
     text-decoration: none;
+}
+
+/* Restaurantblokken */
+.restaurant-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.restaurant-block img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurant-info h2 {
+    font-size: 1.8rem;
+    color: #00d1a0;
+    margin-bottom: 0.5rem;
+}
+
+.restaurant-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+.restaurant-info a {
+    color: #00d1a0;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.restaurant-info a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -247,19 +308,45 @@ footer {
     color: #e0e0e0;
 }
 
+/* Animaties */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Responsiviteit */
 @media (max-width: 768px) {
     .themes {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .latest-news article {
         flex-direction: column;
     }
 
-    .latest-news img {
+    .restaurant-block {
+        flex-direction: column;
+    }
+
+    .restaurant-block img {
         width: 100%;
-        height: auto;
     }
 }
